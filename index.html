@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+  <header id="header">
+    <div class="container">
+      <a href="#" class="logo">Portfolio</a>
+      
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#hackathons">Hackathons</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+          <svg id="sun-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+        </button>
+      </nav>
+      
+      <div class="mobile-nav-container">
+        <button id="theme-toggle-mobile" aria-label="Toggle theme">
+          <svg id="moon-icon-mobile" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+          <svg id="sun-icon-mobile" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+        </button>
+        <button id="mobile-menu-btn" aria-label="Toggle menu">
+          <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <nav id="mobile-nav" class="hidden">
+      <ul>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#hackathons" class="mobile-nav-link">Hackathons</a></li>
+        <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-content gsap-text-reveal">
+        <h1>Hi, I'm <span class="text-primary">Kunal Sharma</span></h1>
+        <p>Full Stack Developer, SoftWare Engineer & Machine Learning Enthusiast</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#about" class="btn btn-secondary">Learn More</a>
+        </div>
+        
+        <div class="scroll-indicator">
+          <a href="#about">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header gsap-reveal">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <h2>About Me</h2>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-text order-2">
+          <h3 class="gsap-text-reveal">Hello, I'm <span class="text-primary">Kunal Sharma</span></h3>
+          <div class="text-content">
+            <p class="gsap-text-reveal">
+                I'm a dedicated Web Developer constantly expanding my skillset, currently diving deep into Data Structures & Algorithms and Machine Learning, with plans to explore Computer Vision next. I actively solve coding challenges on platforms like LeetCode and HackerRank to sharpen my problem-solving skills.
+            </p>
+            <p class="gsap-text-reveal">
+                My project experience includes building an AI-powered RTI automation system with features like ML-based department prediction, secure OTP verification, Hindi-to-English translation, and content moderation. These innovations have earned recognition at various hackathons, including 6th place at IIT Delhi Hackathon, Top 6 at MAIT BuildWars, and Top 30 in the Smart Delhi Ideathon.            </p>
+            <p class="gsap-text-reveal">
+                Beyond tech, I'm passionate about gaming and have completed several games, combining my love for competition with an analytical mindset. I’ve also led volleyball teams to victory in multiple tournaments, showcasing teamwork and leadership. Currently, I balance my technical pursuits with an HR role at Teaddle Media, bridging both tech and people management domains.          </div>
+          
+          <div class="cta-button gsap-text-reveal">
+            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          </div>
+        </div>
+        
+        <div class="about-image gsap-float order-1">
+          <div class="photo-container">
+            <img src="/components/images/profile.jpg" alt="Kunal Sharma" class="profile-photo">
+            <div class="floating-badge badge-web">Web Dev</div>
+            <div class="floating-badge badge-ml">ML</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-alt">
+    <div class="container">
+      <div class="section-header gsap-reveal">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <h2>My Skills</h2>
+      </div>
+      
+      <div class="skills-grid">
+        <div class="skill-card gsap-reveal">
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>GSAP</span>
+            <span>Canva</span>
+            <span>Tailwind CSS</span>
+          </div>
+        </div>
+        
+        <div class="skill-card gsap-reveal" data-delay="100">
+          <h3>Backend</h3>
+          <div class="skill-tags">
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>Python</span>
+            <span>Flask</span>
+            <span>SQL</span>
+            <span>MongoDB</span>
+            <span>Rest API</span>
+            <span>APIs</span>
+            <span>Supabase</span>
+            <span>DSA</span>
+            <span>OOPS</span>
+          </div>
+        </div>
+        
+        <div class="skill-card gsap-reveal" data-delay="200">
+          <h3>Tools</h3>
+          <div class="skill-tags">
+            <span>Git</span>
+            <span>Render</span>
+            <span>VS Code</span>
+            <span>Vercel</span>
+          </div>
+        </div>
+        
+        <div class="skill-card gsap-reveal" data-delay="300">
+          <h3>ML & Data</h3>
+          <div class="skill-tags">
+            <span>Jupyter Notebook</span>
+            <span>Numpy</span>
+            <span>Pandas</span>
+            <span>Scikit Learn</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center gsap-reveal">
+        <p>Always learning and expanding my skill set.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header gsap-reveal">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <h2>Featured Projects</h2>
+      </div>
+      
+      <div class="projects-grid">
+        <div class="project-card gsap-reveal">
+          <div class="project-image">
+            <img src="/components/images/AgroNexus.jpg" alt="Project One">
+            <div class="project-links">
+              <a href="https://github.com/404-The-Optimistics/Agro-Nexus" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://drive.google.com/file/d/1bhp-vZwOvbwajlSpvJ9nyVpHdHCAUYqY/view" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Agro Nexus</h3>
+            <p>An AI & IoT-powered platform offering crop recommendations, disease detection, price forecasting, and irrigation scheduling. Features gamified growth tracking and a reward-based e-commerce marketplace to promote sustainable farming.
+                <br>🏆 Winner – Sustainability Theme (ReUplyog), HackVSIT 6.0</p>
+            <div class="project-tags">
+              <span>Arduino</span>
+              <span>Python</span>
+              <span>MongoDB</span>
+              <span>Flask</span>
+              <span>PyTorch</span>
+              <span>Jupyter Notebook</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card gsap-reveal" data-delay="100">
+          <div class="project-image">
+            <img src="/components/images/RTIQuery.jpg" alt="Project Two">
+            <div class="project-links">
+              <a href="https://github.com/JUGADU-GEEKS/BuildWars" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://rtiqueryporttal.onrender.com/" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>RTI Query Portal</h3>
+            <p>An AI-powered system that automates RTI request filing by converting natural language queries into structured formats, predicting departments via ML, verifying users with secure OTPs, and offering Hindi-to-English translation with abuse detection.
+                <br>🏆 Top 6 – MAIT BuildWars Hackathon</p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Gemini API</span>
+              <span>HTML, CSS, JS</span>
+              <span>Flask</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card gsap-reveal" data-delay="200">
+          <div class="project-image">
+            <img src="/components/images/DatabaseAggregator.jpg" alt="Project Three">
+            <div class="project-links">
+              <a href="https://github.com/JUGADU-GEEKS/Police-Data-Aggregation" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://police-data-aggregation.onrender.com/" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>DataBase Aggregator</h3>
+            <p>An AI-enhanced platform that unifies criminal records, court cases, and police data, enabling efficient retrieval through structured SQL and NLP-based searches. Built with Flask and PostgreSQL, it supports real-time insights for law enforcement, judiciary, and policymakers.
+                <br>🏛️ Used by legal and investigative professionals for data-driven decision-making <br>🏆 Top 5 - IIITD Hack'24 Hackathon</p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Railway</span>
+              <span>PostgreSQL</span>
+              <span>Flask</span>
+              <span>HTML, CSS, JS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card gsap-reveal" data-delay="200">
+          <div class="project-image">
+            <img src="/components/images/Airplanes.jpg" alt="Project Three">
+            <div class="project-links">
+              <a href="https://github.com/KunnuSherryy/AirLines" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://airlinesreservationsystem.vercel.app/" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>DataBase Aggregator</h3>
+            <p>Developed as part of a team, this project streamlines flight bookings, schedules, employee assignments, and airport operations with a robust relational database. Built with Flask for the backend, HTML/CSS/JS for the frontend, and a well-structured schema to ensure smooth data management.
+                <br>✈️ Collaborated with Bhagwan Parshuram Institute of Technology</p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Supabase</span>
+              <span>Flask</span>
+              <span>HTML, CSS, JS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card gsap-reveal" data-delay="300">
+          <div class="project-image">
+            <img src="/components/images/FlavourScript.jpg" alt="Project Four">
+            <div class="project-links">
+              <a href="https://github.com/JUGADU-GEEKS/Recipes" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://recipessearch.onrender.com/signup" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Flavour Scripts</h3>
+            <p>A smart recipe platform that suggests dishes based on available ingredients using the Spoonacular API. Features include custom recipe submissions, vegan filters, a “Surprise Me” option, and detailed cooking insights — all wrapped in a smooth, user-friendly UI.
+                <br>🍽️ Built with Node.js, Express, HTML/CSS, and JavaScript</p>
+            <div class="project-tags">
+              <span>Nodejs</span>
+              <span>MongoDB</span>
+              <span>API</span>
+              <span>HTML, CSS, JS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card gsap-reveal" data-delay="300">
+          <div class="project-image">
+            <img src="/components/images/PizzaDelivery.jpg" alt="Project Four">
+            <div class="project-links">
+              <a href="https://github.com/KunnuSherry/Web-Development-Full-Stack-Projects/tree/main/PizzaDeliverySystem" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7254199142359416834/" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Pizza Delivery System</h3>
+            <p>A full-stack web app built during my internship at Oasis Infobyte, featuring user/admin login, OTP email verification, real-time order tracking, custom pizza creation, and payment integration with Razorpay.
+                <br>🍕 Built with React, Node.js, Express, MongoDB, JWT, and Razorpay</p>
+            <div class="project-tags">
+              <span>Nodejs</span>
+              <span>MongoDB</span>
+              <span>HTML, CSS, JS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card gsap-reveal" data-delay="300">
+          <div class="project-image">
+            <img src="/components/images/KyaSochraHai.jpg" alt="Project Four">
+            <div class="project-links">
+              <a href="https://github.com/KunnuSherry/Web-Development-Full-Stack-Projects/tree/main/KyaSochraHai" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://kyasochrahai.onrender.com/" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Kya Sochra Hai</h3>
+            <p>A thought-sharing platform allowing users to post, explore, and engage with ideas. Features customizable themes, secure JWT-based authentication, and an easy-to-use interface for discovering and liking content.
+                <br>🎉 Built with Node.js, Express, MongoDB, and JWT</p>
+            <div class="project-tags">
+              <span>Nodejs</span>
+              <span>MongoDB</span>
+              <span>HTML, CSS, JS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center gsap-reveal">
+        <a href="#" class="view-all">
+          View All Projects
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hackathons Section -->
+  <section id="hackathons" class="bg-alt">
+    <div class="container">
+      <div class="section-header gsap-reveal">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </div>
+        <h2>Hackathon Experiences</h2>
+      </div>
+      
+      <div class="hackathon-grid">
+        <div class="hackathon-card gsap-reveal">
+          <div class="hackathon-content">
+            <h3>HackTech 2023</h3>
+            <p class="hackathon-date">March 2023</p>
+            <p class="hackathon-description">Developed an AI-powered sustainability app that helps users reduce their carbon footprint through smart recommendations.</p>
+            <div class="hackathon-achievement">
+              <span>1st Place Overall</span>
+            </div>
+            <button class="hackathon-photos-btn" data-hackathon="hacktech">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              View Photos
+            </button>
+          </div>
+        </div>
+
+        <div class="hackathon-card gsap-reveal" data-delay="100">
+          <div class="hackathon-content">
+            <h3>Code for Good</h3>
+            <p class="hackathon-date">November 2023</p>
+            <p class="hackathon-description">Built an accessibility tool for visually impaired users that converts text to speech and provides haptic feedback.</p>
+            <div class="hackathon-achievement">
+              <span>Best Social Impact</span>
+            </div>
+            <button class="hackathon-photos-btn" data-hackathon="codeforgood">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              View Photos
+            </button>
+          </div>
+        </div>
+
+        <div class="hackathon-card gsap-reveal" data-delay="200">
+          <div class="hackathon-content">
+            <h3>HealthTech Hackathon</h3>
+            <p class="hackathon-date">July 2022</p>
+            <p class="hackathon-description">Created a telehealth platform that connects patients with mental health professionals through secure video consultations.</p>
+            <div class="hackathon-achievement">
+              <span>Best UX Design</span>
+            </div>
+            <button class="hackathon-photos-btn" data-hackathon="healthtech">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              View Photos
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo Modal -->
+    <div id="photo-modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h3 id="modal-title"></h3>
+        <div id="modal-photos" class="modal-photos"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements">
+    <div class="container">
+      <div class="section-header gsap-reveal">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="7"></circle>
+            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+          </svg>
+        </div>
+        <h2>Achievements</h2>
+      </div>
+      
+      <div class="achievements-grid">
+        <div class="achievement-card gsap-float gsap-reveal">
+          <div class="achievement-icon">🏆</div>
+          <h3>Best Developer Award</h3>
+          <p class="achievement-org">Tech Conference 2023</p>
+          <p class="achievement-desc">Recognized for outstanding contributions to open-source development and innovative solutions.</p>
+          <p class="achievement-date">December 2023</p>
+        </div>
+
+        <div class="achievement-card gsap-float gsap-reveal" data-delay="100">
+          <div class="achievement-icon">🥇</div>
+          <h3>First Place</h3>
+          <p class="achievement-org">National Coding Competition</p>
+          <p class="achievement-desc">Won first place for developing an AI-powered accessibility tool for visually impaired users.</p>
+          <p class="achievement-date">August 2023</p>
+        </div>
+
+        <div class="achievement-card gsap-float gsap-reveal" data-delay="200">
+          <div class="achievement-icon">📄</div>
+          <h3>Research Paper Publication</h3>
+          <p class="achievement-org">Journal of Computer Science</p>
+          <p class="achievement-desc">Published research on efficient algorithms for natural language processing tasks.</p>
+          <p class="achievement-date">March 2023</p>
+        </div>
+
+        <div class="achievement-card gsap-float gsap-reveal" data-delay="300">
+          <div class="achievement-icon">🎓</div>
+          <h3>Scholarship Recipient</h3>
+          <p class="achievement-org">Google Developer Scholarship</p>
+          <p class="achievement-desc">Selected among thousands of applicants for the Google Developer Scholarship program.</p>
+          <p class="achievement-date">January 2023</p>
+        </div>
+
+        <div class="achievement-card gsap-float gsap-reveal" data-delay="400">
+          <div class="achievement-icon">💻</div>
+          <h3>Hackathon Winner</h3>
+          <p class="achievement-org">Global Hack Week</p>
+          <p class="achievement-desc">Led a team to victory by building a sustainable technology solution for rural communities.</p>
+          <p class="achievement-date">November 2022</p>
+        </div>
+
+        <div class="achievement-card gsap-float gsap-reveal" data-delay="500">
+          <div class="achievement-icon">🎤</div>
+          <h3>Speaker</h3>
+          <p class="achievement-org">Web Development Summit</p>
+          <p class="achievement-desc">Invited as a speaker to present on modern web development practices and performance optimization.</p>
+          <p class="achievement-date">September 2022</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="bg-alt">
+    <div class="container">
+      <div class="section-header gsap-reveal">
+        <div class="icon-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </div>
+        <h2>Get In Touch</h2>
+      </div>
+      
+      <div class="contact-container">
+        <div class="contact-form-container gsap-reveal">
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">
+              <span>Send Message</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+          <div id="form-success" class="form-success hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+          </div>
+        </div>
+        
+        <div class="contact-info gsap-reveal" data-delay="200">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-info-content">
+              <h4>Email</h4>
+              <p><a href="mailto:kunal.sharma@example.com">kunal.sharma@example.com</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="contact-info-content">
+              <h4>Phone</h4>
+              <p><a href="tel:+91XXXXXXXXXX">+91 XXXX XXXXX</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-info-content">
+              <h4>Location</h4>
+              <p>Bangalore, India</p>
+            </div>
+          </div>
+          
+          <div class="social-links-container">
+            <h4>Connect With Me</h4>
+            <div class="social-icons">
+              <a href="https://github.com/yourusername" target="_blank" class="social-icon" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              
+              <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-icon" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              
+              <a href="https://twitter.com/yourusername" target="_blank" class="social-icon" aria-label="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                </svg>
+              </a>
+              
+              <a href="https://instagram.com/yourusername" target="_blank" class="social-icon" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              
+              <a href="https://medium.com/@yourusername" target="_blank" class="social-icon" aria-label="Medium">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 41.578v-.372c0-.215-.012-.493-.037-.835a5.63 5.63 0 0 0-.193-1.175 3.587 3.587 0 0 0-.563-1.188c-.28-.355-.607-.64-.981-.853-.375-.215-.885-.368-1.529-.462-.645-.093-1.425-.14-2.341-.14H4.5v17h6.556c1.035 0 1.894-.047 2.579-.14.684-.094 1.276-.263 1.774-.508.498-.245.911-.521 1.238-.828.327-.308.597-.736.81-1.283.214-.548.368-1.096.462-1.643.093-.548.145-1.2.157-1.957.01-.757.016-1.706.016-2.847 0-1.13-.006-2.071-.016-2.821zm-12.156 10.55V8.872H8.89v13.256H5.844zm7.744 0c-.645 0-1.164-.047-1.557-.14-.394-.093-.706-.243-.937-.45a1.79 1.79 0 0 1-.478-.735c-.095-.28-.157-.646-.185-1.096a19.01 19.01 0 0 1-.049-1.527V16.1c0-.69.016-1.226.049-1.61.032-.383.09-.698.172-.944s.197-.45.34-.614c.144-.168.34-.299.59-.394.25-.093.563-.159.937-.195.375-.037.835-.056 1.38-.056h2.108v10.83h-2.37v.001z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

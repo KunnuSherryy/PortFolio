@@ -84,15 +84,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const hackathonBtns = document.querySelectorAll('.hackathon-photos-btn');
     
     const hackathonData = {
-      hacktech: {
-        title: 'HackTech 2023',
+      shlokadecode: {
+        title: 'Shloka Decode NSUT',
         photos: [
           'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80',
           'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80'
         ]
       },
-      codeforgood: {
-        title: 'Code for Good',
+      buildwars: {
+        title: 'BuildWars MAIT',
         photos: [
           'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80',
           'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80'

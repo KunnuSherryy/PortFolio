@@ -214,4 +214,31 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+
+    // Initialize GSAP animations for the competitive programming section
+    document.addEventListener('DOMContentLoaded', function() {
+      gsap.registerPlugin(ScrollTrigger);
+      
+      // Reveal animations for competitive programming cards
+      gsap.utils.toArray('.comp-platforms-grid .gsap-reveal').forEach(function(elem) {
+        ScrollTrigger.create({
+          trigger: elem,
+          start: "top 85%",
+          onEnter: function() {
+            gsap.fromTo(elem, 
+              {y: 50, opacity: 0}, 
+              {
+                duration: 1.2, 
+                y: 0,
+                opacity: 1,
+                ease: "power3.out",
+                delay: elem.dataset.delay ? elem.dataset.delay / 1000 : 0
+              }
+            );
+          },
+          once: true
+        });
+      });
+    });
+  
   

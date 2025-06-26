@@ -1,4 +1,3 @@
-
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize GSAP
@@ -148,6 +147,60 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize GSAP animations
     initAnimations();
+    
+    // Project Filter System
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    // Initialize all cards as visible
+    projectCards.forEach(card => {
+      card.classList.add('visible');
+    });
+    
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+        
+        const filter = btn.getAttribute('data-filter');
+        
+        projectCards.forEach(card => {
+          const categories = card.getAttribute('data-category');
+          
+          if (filter === 'all' || categories.includes(filter)) {
+            card.classList.remove('hidden');
+            card.classList.add('visible');
+          } else {
+            card.classList.add('hidden');
+            card.classList.remove('visible');
+          }
+        });
+        
+        // Trigger GSAP animations for visible cards
+        setTimeout(() => {
+          gsap.utils.toArray(".project-card.visible").forEach((element, index) => {
+            gsap.fromTo(
+              element,
+              { 
+                y: 50, 
+                opacity: 0,
+                scale: 0.8
+              },
+              {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: "back.out(1.7)"
+              }
+            );
+          });
+        }, 100);
+      });
+    });
   });
   
   // GSAP Animations
